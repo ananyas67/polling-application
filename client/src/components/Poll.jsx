@@ -5,6 +5,9 @@ import { Pie } from 'react-chartjs-2';
 import { vote } from '../store/actions';
 import { color } from '../services/color';
 
+import {Chart, ArcElement} from 'chart.js'
+Chart.register(ArcElement);
+
 const Poll = ({ poll, vote }) => {
   const answers =
     poll.options &&
